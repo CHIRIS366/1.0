@@ -5,7 +5,7 @@ name: Storefront 622892
 on: [push]
 
 permissions:
-  contents: read
+  contents: readq
   deployments: write
 
 jobs:
@@ -44,7 +44,7 @@ jobs:
           oxygen_deployment_token: ${{ secrets.OXYGEN_DEPLOYMENT_TOKEN_622892 }}
           build_command: "HYDROGEN_ASSET_BASE_URL=$OXYGEN_ASSET_BASE_URL yarn build"
 
-      # Create GitHub Deployment
+      #.github/workflows/oxygen-deployment-622892.yml 
       - name: Create GitHub Deployment
         uses: shopify/github-deployment-action@v1
         if: always()
